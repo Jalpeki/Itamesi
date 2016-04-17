@@ -17,11 +17,15 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public String execute(){
 		LoginDAO dao = new LoginDAO();
+		System.out.println("a" + email + password);
 		if(!dao.select(email,password)){
 			setMessage("メールアドレスまたは、パスワードが間違っています");
 			return ERROR;
 		}
 		session.put("id", dao.getId());
+		System.out.println(session);
+		return SUCCESS;
+
 	}
 
 

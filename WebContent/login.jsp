@@ -9,6 +9,9 @@
 </head>
 <body>
 <div align=center><h1>イタ飯</h1>
+<s:iterator value = "Message">
+      <s:property value = "Message"/>
+   </s:iterator>
     <s:form action="LoginAction">
        メールアドレス<s:textfield name="email"/><br>
        パスワード <s:password name="password"/><br>
